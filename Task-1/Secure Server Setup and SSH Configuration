@@ -38,7 +38,7 @@ mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 
 Added public key:
-nano ~/.ssh/authorized_keys
+vim ~/.ssh/authorized_keys
 
 Set permissions:
 chmod 600 ~/.ssh/authorized_keys
@@ -47,6 +47,6 @@ Tested passwordless login:
 ssh anil@localhost
 
 Disabled password authentication:
-sudo nano /etc/ssh/sshd_config
+sudo vim /etc/ssh/sshd_config
 Changed: PasswordAuthentication no
 sudo systemctl restart ssh
