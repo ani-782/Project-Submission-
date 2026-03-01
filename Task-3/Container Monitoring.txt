@@ -1,0 +1,30 @@
+TASK 3 – Container Monitoring
+
+Created monitoring directory:
+sudo mkdir -p /opt/container-monitor/logs
+
+Created monitoring script:
+sudo nano /opt/container-monitor/monitor.sh
+
+Added script content to capture:
+- Timestamp
+- CPU usage
+- Memory usage
+
+Made script executable:
+sudo chmod +x /opt/container-monitor/monitor.sh
+
+Configured cron job:
+crontab -e
+
+Added:
+* * * * * /opt/container-monitor/monitor.sh
+
+Verified cron service:
+sudo systemctl status cron
+
+Verified log file:
+cat /opt/container-monitor/logs/monitor.log
+
+Result:
+Container CPU and memory usage logged automatically every minute.
