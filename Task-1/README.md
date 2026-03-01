@@ -75,6 +75,7 @@ vim ~/.ssh/authorized_keys
 Set correct permissions:
 
 chmod 600 ~/.ssh/authorized_keys
+
 Step 5 – Test Passwordless Login
 
 Exited Ubuntu and tested:
@@ -87,7 +88,7 @@ Step 6 – Disable Password Authentication (Security Hardening)
 
 Edited SSH configuration:
 
-sudo nano /etc/ssh/sshd_config
+sudo vim /etc/ssh/sshd_config
 
 Modified:
 
