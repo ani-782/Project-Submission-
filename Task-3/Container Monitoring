@@ -4,7 +4,7 @@ Created monitoring directory:
 sudo mkdir -p /opt/container-monitor/logs
 
 Created monitoring script:
-sudo nano /opt/container-monitor/monitor.sh
+sudo vim /opt/container-monitor/monitor.sh
 
 Added script content to capture:
 - Timestamp
