@@ -1,0 +1,29 @@
+TASK 4 – User & Permission Security
+
+Created monitoring user:
+sudo adduser monitoruser
+
+Created monitoring directory:
+sudo mkdir -p /opt/container-monitor/logs
+
+Assigned ownership:
+sudo chown -R monitoruser:monitoruser /opt/container-monitor
+
+Restricted permissions:
+sudo chmod -R 700 /opt/container-monitor
+
+Verified access:
+
+Switch to monitoring user:
+su monitoruser
+cat /opt/container-monitor/logs/monitor.log
+
+Access successful
+
+Switch back:
+exit
+cat /opt/container-monitor/logs/monitor.log
+Permission denied
+
+Result:
+Monitoring logs secured successfully.
