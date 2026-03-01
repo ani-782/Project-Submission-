@@ -1,0 +1,38 @@
+TASK 2 – Docker Installation and Application Deployment
+
+Installed Docker:
+sudo apt update
+sudo apt install docker.io -y
+sudo systemctl enable docker
+sudo systemctl start docker
+
+Added user to docker group:
+sudo usermod -aG docker anil
+
+Created project directory:
+mkdir myapp
+cd myapp
+
+Created index.html:
+vim index.html
+
+Created Dockerfile:
+vim Dockerfile
+
+Built Docker image:
+docker build -t myweb .
+
+Verified image:
+docker images
+
+Ran container:
+docker run -d -p 8000:80 --name myweb myweb
+
+Verified container:
+docker ps
+
+Accessed application:
+http://localhost:8000
+
+Result:
+Docker container deployed successfully and accessible on port 8000.
