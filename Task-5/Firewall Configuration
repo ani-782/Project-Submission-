@@ -1,0 +1,29 @@
+TASK 5 – Firewall Configuration
+
+Installed UFW:
+sudo apt update
+sudo apt install ufw -y
+
+Set default policies:
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+
+Allowed required ports:
+sudo ufw allow 22
+sudo ufw allow 80
+sudo ufw allow 8000
+
+Enabled firewall:
+sudo ufw enable
+
+Checked status:
+sudo ufw status verbose
+
+Verified SSH:
+ssh anil@localhost
+
+Verified web application:
+http://localhost:8000
+
+Result:
+Firewall configured successfully allowing only required ports.
