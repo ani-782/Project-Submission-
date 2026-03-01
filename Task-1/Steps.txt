@@ -1,0 +1,52 @@
+TASK 1 – Secure Server Setup
+
+VM Creation:
+
+Created VirtualBox VM
+
+Attached Ubuntu Server ISO
+
+Installed Ubuntu Server
+
+Created user: anil
+
+Installed SSH:
+sudo apt update
+sudo apt install openssh-server -y
+sudo systemctl enable ssh
+sudo systemctl start ssh
+sudo systemctl status ssh
+
+Configured NAT Port Forwarding:
+Host Port: 22
+Guest Port: 22
+
+Connected from Windows:
+ssh anil@localhost
+
+Generated SSH key (Windows):
+ssh-keygen
+
+Verified key exists:
+dir $env:USERPROFILE.ssh
+
+Logged into Ubuntu:
+ssh anil@localhost
+
+Created SSH directory:
+mkdir -p ~/.ssh
+chmod 700 ~/.ssh
+
+Added public key:
+nano ~/.ssh/authorized_keys
+
+Set permissions:
+chmod 600 ~/.ssh/authorized_keys
+
+Tested passwordless login:
+ssh anil@localhost
+
+Disabled password authentication:
+sudo nano /etc/ssh/sshd_config
+Changed: PasswordAuthentication no
+sudo systemctl restart ssh
